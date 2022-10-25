@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E16B64C2907C7C6000EACA8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B64B2907C7C6000EACA8 /* DetailView.swift */; };
+		0E16B64E2907C811000EACA8 /* ArchiveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B64D2907C811000EACA8 /* ArchiveDetailView.swift */; };
+		0E16B6562907CD2B000EACA8 /* ArchiveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B6542907CD2B000EACA8 /* ArchiveCardView.swift */; };
+		0E16B6572907CD2B000EACA8 /* FocusCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B6552907CD2B000EACA8 /* FocusCardView.swift */; };
+		0E16B65D2907CD60000EACA8 /* EmojiStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B6592907CD60000EACA8 /* EmojiStruct.swift */; };
+		0E16B65E2907CD60000EACA8 /* ArchiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B65A2907CD60000EACA8 /* ArchiveCard.swift */; };
+		0E16B65F2907CD60000EACA8 /* FocusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B65B2907CD60000EACA8 /* FocusCard.swift */; };
+		0E16B6602907CD60000EACA8 /* SheetStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B65C2907CD60000EACA8 /* SheetStruct.swift */; };
+		0E16B6622907D132000EACA8 /* SheetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B6612907D132000EACA8 /* SheetViews.swift */; };
 		0E1B3E89290540B7001B5471 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B3E88290540B7001B5471 /* Launch Screen.storyboard */; };
 		0E1B3E8C29066958001B5471 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B3E8A29066958001B5471 /* Database.xcdatamodeld */; };
 		0E232C3328FD439400350399 /* MC1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E232C3228FD439400350399 /* MC1App.swift */; };
@@ -17,9 +26,21 @@
 		0E47EC452902744C0010880D /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47EC442902744C0010880D /* FocusView.swift */; };
 		0E47EC47290276CF0010880D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47EC46290276CF0010880D /* JournalView.swift */; };
 		0E47EC5129027A7D0010880D /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47EC5029027A7D0010880D /* PersistenceController.swift */; };
+		0E6AD37A2907D17E003BD8FD /* MoodSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD3792907D17E003BD8FD /* MoodSheets.swift */; };
+		0E6AD37C2907D1A3003BD8FD /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */; };
+		0E6AD37E2907D1C5003BD8FD /* BottomBrowseAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37D2907D1C5003BD8FD /* BottomBrowseAct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E16B64B2907C7C6000EACA8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0E16B64D2907C811000EACA8 /* ArchiveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDetailView.swift; sourceTree = "<group>"; };
+		0E16B6542907CD2B000EACA8 /* ArchiveCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveCardView.swift; sourceTree = "<group>"; };
+		0E16B6552907CD2B000EACA8 /* FocusCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusCardView.swift; sourceTree = "<group>"; };
+		0E16B6592907CD60000EACA8 /* EmojiStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiStruct.swift; sourceTree = "<group>"; };
+		0E16B65A2907CD60000EACA8 /* ArchiveCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveCard.swift; sourceTree = "<group>"; };
+		0E16B65B2907CD60000EACA8 /* FocusCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusCard.swift; sourceTree = "<group>"; };
+		0E16B65C2907CD60000EACA8 /* SheetStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetStruct.swift; sourceTree = "<group>"; };
+		0E16B6612907D132000EACA8 /* SheetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViews.swift; sourceTree = "<group>"; };
 		0E1B3E88290540B7001B5471 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0E1B3E8B29066958001B5471 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		0E232C2F28FD439400350399 /* MC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +52,9 @@
 		0E47EC442902744C0010880D /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		0E47EC46290276CF0010880D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		0E47EC5029027A7D0010880D /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		0E6AD3792907D17E003BD8FD /* MoodSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSheets.swift; sourceTree = "<group>"; };
+		0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		0E6AD37D2907D1C5003BD8FD /* BottomBrowseAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBrowseAct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +68,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E16B6532907CD2B000EACA8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				0E16B64D2907C811000EACA8 /* ArchiveDetailView.swift */,
+				0E16B6542907CD2B000EACA8 /* ArchiveCardView.swift */,
+				0E16B6552907CD2B000EACA8 /* FocusCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		0E16B6582907CD60000EACA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E16B6592907CD60000EACA8 /* EmojiStruct.swift */,
+				0E16B65A2907CD60000EACA8 /* ArchiveCard.swift */,
+				0E16B65B2907CD60000EACA8 /* FocusCard.swift */,
+				0E16B65C2907CD60000EACA8 /* SheetStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0E232C2628FD439400350399 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +108,9 @@
 		0E232C3128FD439400350399 /* MC1 */ = {
 			isa = PBXGroup;
 			children = (
+				0E6AD37F2907D407003BD8FD /* MoodTracker */,
+				0E16B6582907CD60000EACA8 /* Model */,
+				0E16B6532907CD2B000EACA8 /* Card */,
 				0E47EC49290277E80010880D /* CoreData */,
 				0E232C3228FD439400350399 /* MC1App.swift */,
 				0E47EC3F29015A810010880D /* Views */,
@@ -88,6 +136,7 @@
 				0E47EC40290274250010880D /* ArchiveView.swift */,
 				0E47EC442902744C0010880D /* FocusView.swift */,
 				0E47EC46290276CF0010880D /* JournalView.swift */,
+				0E16B64B2907C7C6000EACA8 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +148,17 @@
 				0E1B3E8A29066958001B5471 /* Database.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0E6AD37F2907D407003BD8FD /* MoodTracker */ = {
+			isa = PBXGroup;
+			children = (
+				0E16B6612907D132000EACA8 /* SheetViews.swift */,
+				0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */,
+				0E6AD3792907D17E003BD8FD /* MoodSheets.swift */,
+				0E6AD37D2907D1C5003BD8FD /* BottomBrowseAct.swift */,
+			);
+			path = MoodTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,13 +232,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E16B65F2907CD60000EACA8 /* FocusCard.swift in Sources */,
+				0E16B6572907CD2B000EACA8 /* FocusCardView.swift in Sources */,
+				0E16B6622907D132000EACA8 /* SheetViews.swift in Sources */,
+				0E16B64E2907C811000EACA8 /* ArchiveDetailView.swift in Sources */,
+				0E16B64C2907C7C6000EACA8 /* DetailView.swift in Sources */,
 				0E232C3528FD439400350399 /* TodayView.swift in Sources */,
 				0E47EC47290276CF0010880D /* JournalView.swift in Sources */,
+				0E16B65D2907CD60000EACA8 /* EmojiStruct.swift in Sources */,
+				0E16B65E2907CD60000EACA8 /* ArchiveCard.swift in Sources */,
 				0E1B3E8C29066958001B5471 /* Database.xcdatamodeld in Sources */,
+				0E16B6562907CD2B000EACA8 /* ArchiveCardView.swift in Sources */,
+				0E6AD37C2907D1A3003BD8FD /* EmojiView.swift in Sources */,
 				0E47EC452902744C0010880D /* FocusView.swift in Sources */,
 				0E47EC41290274250010880D /* ArchiveView.swift in Sources */,
 				0E232C3328FD439400350399 /* MC1App.swift in Sources */,
+				0E16B6602907CD60000EACA8 /* SheetStruct.swift in Sources */,
 				0E47EC5129027A7D0010880D /* PersistenceController.swift in Sources */,
+				0E6AD37E2907D1C5003BD8FD /* BottomBrowseAct.swift in Sources */,
+				0E6AD37A2907D17E003BD8FD /* MoodSheets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

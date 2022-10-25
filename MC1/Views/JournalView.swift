@@ -16,8 +16,10 @@ struct JournalView: View {
     @State private var textTwo: String = ""
     
     var body: some View {
+        
         NavigationStack{
             VStack(alignment: .leading, spacing: 16){
+                
                 
                 Text("What happened today?").bold().padding([.leading], 16)
                 
@@ -87,6 +89,8 @@ struct JournalView: View {
 
 struct JournalView_Previews: PreviewProvider {
     static var previews: some View {
-        JournalView()
+        let context =  MC1App().persistenceController.container.viewContext
+        return JournalView().environment(\.managedObjectContext, context)
+        //JournalView()
     }
 }
