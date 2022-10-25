@@ -22,7 +22,7 @@ struct TodayView: View {
         NavigationStack {
             ZStack(alignment: .bottom) {
                 Color("myBackground").ignoresSafeArea()
-                VStack(spacing: 30) {
+                VStack(alignment: .leading) {
                     Text("How do you feel today?").padding(.leading, 17)
                     ScrollView(.horizontal, showsIndicators: false) {
                     

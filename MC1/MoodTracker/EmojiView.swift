@@ -23,7 +23,7 @@ struct EmojiView: View {
                     if emojiScroll.isSelected {
                         Color.accentColor
                     } else {
-                        Color.white
+                        Color(UIColor.tertiarySystemBackground)
                     }
                 }
                 .mask(Circle())
