@@ -12,3 +12,4 @@ The project is made in Swift (with the help of SwiftUI) by a team of five member
  * [ ] App Name
  * [x] Design assets
  * [ ] Make a launch screen (.storyboard)
+
