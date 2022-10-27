@@ -42,6 +42,6 @@ struct ArchiveCardView: View {
 
 struct ArchiveCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ArchiveCardView(card: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10, journal: "..."))
+        ArchiveCardView(card: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10))
     }
 }

@@ -13,5 +13,4 @@ struct ArchiveCard: Identifiable {
     var archiveIcon: String
     var archiveName: String
     var archiveDays: Int
-    var journal: String
 }

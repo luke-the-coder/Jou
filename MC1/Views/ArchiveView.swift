@@ -29,25 +29,24 @@ struct ArchiveView: View {
     let screenHeight = UIScreen.main.bounds.height
     
     var archiveCard = [
-        ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10, journal: "..."),
-        ArchiveCard(archiveIcon: "😁", archiveName: "Happy", archiveDays: 2, journal: "..."),
-        ArchiveCard(archiveIcon: "😲", archiveName: "Surprised", archiveDays: 2, journal: "..."),
-        ArchiveCard(archiveIcon: "😰", archiveName: "Scared", archiveDays: 2, journal: "..."),
-        ArchiveCard(archiveIcon: "🤢", archiveName: "Disgusted", archiveDays: 2, journal: "..."),
-        ArchiveCard(archiveIcon: "😠", archiveName: "Angry", archiveDays: 2, journal: "..."),
-        ArchiveCard(archiveIcon: "😢", archiveName: "Sad", archiveDays: 2, journal: "...")
+        ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10),
+        ArchiveCard(archiveIcon: "😁", archiveName: "Happy", archiveDays: 2),
+        ArchiveCard(archiveIcon: "😲", archiveName: "Surprised", archiveDays: 2),
+        ArchiveCard(archiveIcon: "😰", archiveName: "Scared", archiveDays: 2),
+        ArchiveCard(archiveIcon: "🤢", archiveName: "Disgusted", archiveDays: 2),
+        ArchiveCard(archiveIcon: "😠", archiveName: "Angry", archiveDays: 2),
+        ArchiveCard(archiveIcon: "😢", archiveName: "Sad", archiveDays: 2)
     ]
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 Color("myBackground")
                     .ignoresSafeArea()
                 ScrollView{
                     VStack(spacing: 24) {
                         ForEach(archiveCard) { card in
-                            NavigationLink( destination: ArchiveDetailView( detail: card)){
+                            NavigationLink( destination: ArchiveDetailView(detail: card)){
                                 ArchiveCardView(card: card)
                             }
                             
