@@ -28,6 +28,10 @@
 		0E6AD37C2907D1A3003BD8FD /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */; };
 		0E6AD37E2907D1C5003BD8FD /* ButtonBrowseAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37D2907D1C5003BD8FD /* ButtonBrowseAct.swift */; };
 		D37D849E2907DE3600466DFB /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37D849D2907DE3600466DFB /* EmojiViewModel.swift */; };
+		D3E64FC8290A95B600FF77A4 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FC7290A95B600FF77A4 /* ActivityCard.swift */; };
+		D3E64FCA290A960600FF77A4 /* ActivityArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FC9290A960600FF77A4 /* ActivityArray.swift */; };
+		D3E64FCC290A98A000FF77A4 /* ActivitySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FCB290A98A000FF77A4 /* ActivitySheetView.swift */; };
+		D3E64FCE290A9A0400FF77A4 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FCD290A9A0400FF77A4 /* ActivityListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		0E6AD37D2907D1C5003BD8FD /* ButtonBrowseAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBrowseAct.swift; sourceTree = "<group>"; };
 		D37D849D2907DE3600466DFB /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
+		D3E64FC7290A95B600FF77A4 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		D3E64FC9290A960600FF77A4 /* ActivityArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityArray.swift; sourceTree = "<group>"; };
+		D3E64FCB290A98A000FF77A4 /* ActivitySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySheetView.swift; sourceTree = "<group>"; };
+		D3E64FCD290A9A0400FF77A4 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +77,11 @@
 		0E16B6532907CD2B000EACA8 /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				D3E64FCB290A98A000FF77A4 /* ActivitySheetView.swift */,
 				0E16B64D2907C811000EACA8 /* ArchiveDetailView.swift */,
 				0E16B6542907CD2B000EACA8 /* ArchiveCardView.swift */,
 				0E16B6552907CD2B000EACA8 /* FocusCardView.swift */,
+				D3E64FCD290A9A0400FF77A4 /* ActivityListView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -82,6 +92,7 @@
 				0E16B65A2907CD60000EACA8 /* ArchiveCard.swift */,
 				0E16B65B2907CD60000EACA8 /* FocusCard.swift */,
 				0E16B65C2907CD60000EACA8 /* SheetStruct.swift */,
+				D3E64FC7290A95B600FF77A4 /* ActivityCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D37D849D2907DE3600466DFB /* EmojiViewModel.swift */,
+				D3E64FC9290A960600FF77A4 /* ActivityArray.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,14 +255,18 @@
 				D37D849E2907DE3600466DFB /* EmojiViewModel.swift in Sources */,
 				0E16B64E2907C811000EACA8 /* ArchiveDetailView.swift in Sources */,
 				0E16B64C2907C7C6000EACA8 /* DetailView.swift in Sources */,
+				D3E64FCA290A960600FF77A4 /* ActivityArray.swift in Sources */,
 				0E232C3528FD439400350399 /* TodayView.swift in Sources */,
 				0E47EC47290276CF0010880D /* JournalView.swift in Sources */,
+				D3E64FCE290A9A0400FF77A4 /* ActivityListView.swift in Sources */,
 				0E16B65E2907CD60000EACA8 /* ArchiveCard.swift in Sources */,
 				0E1B3E8C29066958001B5471 /* Database.xcdatamodeld in Sources */,
 				0E16B6562907CD2B000EACA8 /* ArchiveCardView.swift in Sources */,
+				D3E64FCC290A98A000FF77A4 /* ActivitySheetView.swift in Sources */,
 				0E6AD37C2907D1A3003BD8FD /* EmojiView.swift in Sources */,
 				0E47EC452902744C0010880D /* FocusView.swift in Sources */,
 				0E47EC41290274250010880D /* ArchiveView.swift in Sources */,
+				D3E64FC8290A95B600FF77A4 /* ActivityCard.swift in Sources */,
 				0E232C3328FD439400350399 /* MC1App.swift in Sources */,
 				0E16B6602907CD60000EACA8 /* SheetStruct.swift in Sources */,
 				0E47EC5129027A7D0010880D /* PersistenceController.swift in Sources */,
