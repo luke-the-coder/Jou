@@ -13,8 +13,11 @@ struct SheetStruct : Identifiable {
     var id: UUID = UUID()
     var titleCard: String
     var subTitleCard: String
-    var emojiCard: String
+    
     var description: String
+    var emoji: String
+    var title: String
+    var isSelected: Bool
     
     
 }

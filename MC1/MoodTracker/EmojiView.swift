@@ -9,25 +9,25 @@ import SwiftUI
 
 struct EmojiView: View {
     
-    var emojiScroll : EmojiStruct
+    var emojiButton : SheetStruct
     
     
     var body: some View {
         
         VStack {
-            Text(emojiScroll.emoji)
+            Text(emojiButton.emoji)
                 .foregroundColor(.white)
                 .font(.largeTitle)
                 .frame(width: 60, height: 60)
                 .background{
-                    if emojiScroll.isSelected {
+                    if emojiButton.isSelected {
                         Color.accentColor
                     } else {
                         Color(UIColor.tertiarySystemBackground)
                     }
                 }
                 .mask(Circle())
-            Text(emojiScroll.title)
+            Text(emojiButton.title)
         }
         
         
@@ -37,6 +37,6 @@ struct EmojiView: View {
 
 struct EmojiView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiView(emojiScroll: EmojiStruct(emoji: "😠", title: "Angry", isSelected: false))
+        EmojiView(emojiButton: SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are angry", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😠", title: "Angry", isSelected: false))
     }
 }
