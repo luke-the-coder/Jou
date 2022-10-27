@@ -7,13 +7,13 @@ import SwiftUI
 struct TodayView: View {
     
     @State var viola: Color = .accentColor
-    
-    //@ObservedObject var emojiViewModel = EmojiViewModel()
-    
+        
     @State private var showingSheet = false
     
     @State private var emotionSheet = false
     
+    @State private var selectedEmoji: SheetStruct?
+
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottom) {
@@ -24,20 +24,15 @@ struct TodayView: View {
                         //benny
                         HStack(spacing: 20) {
                             
-                            ForEach(emojis) { emoji in
+                            ForEach(emojis, id: \.id) { emoji in
                                 Button {
-                                    
-                                    emotionSheet.toggle()
-                                
+                                    selectedEmoji = emoji
                                 } label: {
-                                    
                                     EmojiView(emojiButton: emoji)
                                         .foregroundColor(.primary)
-                                    
                                 }
-                                .sheet(isPresented: $emotionSheet) {
-                                    
-                                    SheetViews(emotion: emoji)
+                                .sheet(item: $selectedEmoji) { selectedEmoji in
+                                    SheetViews(emotion: selectedEmoji)
                                     .presentationDetents([.height(415)])
                                     
                                 }
