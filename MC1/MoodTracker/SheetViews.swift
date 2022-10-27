@@ -24,7 +24,7 @@ struct SheetViews: View {
                     .padding(.top, 40)
                 Text(emotion.subTitleCard)
                 Text(emotion.emoji)
-                    .foregroundColor(.white)
+                    .foregroundColor(                   Color(UIColor.tertiarySystemBackground))
                     .font(.system(size: 80.0))
                     .frame(width: 137, height: 137)
                     .background(Color.accentColor)
@@ -34,8 +34,13 @@ struct SheetViews: View {
                 Text(emotion.description)
                     .multilineTextAlignment(.center)
                     .padding(.top, 16)
-                ButtonBrowseAct()
-                    .padding(.top, 16)
+                Button{
+                    
+                } label: {
+                    ButtonBrowseAct()
+                        .padding(.top, 16)
+                }
+                
                 
                 Spacer()
                 
