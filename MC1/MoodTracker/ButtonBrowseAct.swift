@@ -10,7 +10,7 @@ import SwiftUI
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 
-struct BottonBrowseAct: View {
+struct ButtonBrowseAct: View {
     var body: some View {
         
         Text("Browse activity")
@@ -26,6 +26,6 @@ struct BottonBrowseAct: View {
 
 struct BottonBrowseAct_Previews: PreviewProvider {
     static var previews: some View {
-        BottonBrowseAct()
+        ButtonBrowseAct()
     }
 }
