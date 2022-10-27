@@ -6,12 +6,14 @@ import SwiftUI
 
 struct TodayView: View {
     
+    @ObservedObject var emojiVM = EmojiViewModel()
+    
     @State var viola: Color = .accentColor
         
     @State private var showingSheet = false
     
     @State private var emotionSheet = false
-    
+    @State private var selection = false
     @State private var selectedEmoji: SheetStruct?
 
     var body: some View {
@@ -24,8 +26,10 @@ struct TodayView: View {
                         //benny
                         HStack(spacing: 20) {
                             
-                            ForEach(emojis, id: \.id) { emoji in
+                            ForEach(Array(emojiVM.emojis.enumerated()), id: \.offset) { index, emoji in
                                 Button {
+                                    emojiVM.selectEmoji(at: index)
+                                    
                                     selectedEmoji = emoji
                                 } label: {
                                     EmojiView(emojiButton: emoji)
