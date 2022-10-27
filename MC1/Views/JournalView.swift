@@ -9,6 +9,8 @@ import CoreData
 struct JournalView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) var dismiss
+    @State private var isPresentingConfirm: Bool = false
+
     @FetchRequest(entity: JournalEntry.entity(), sortDescriptors: [])
     private var entries: FetchedResults<JournalEntry>
     
@@ -40,7 +42,7 @@ struct JournalView: View {
                         }
                     }
                 }
-                Text("Feel free to write what you want, you're in a safe place.").fontWeight(.thin).multilineTextAlignment(.leading).padding(.horizontal, 24).font(.caption2)
+     //           Text("Feel free to write what you want, you're in a safe place.").fontWeight(.thin).multilineTextAlignment(.leading).padding(.horizontal, 24).font(.caption2)
                 Spacer()
             }.navigationBarTitleDisplayMode(.inline).toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){ Button("Done") {
@@ -52,9 +54,15 @@ struct JournalView: View {
                     Text("Journal").bold().accessibilityAddTraits(.isHeader)
                 }
                 ToolbarItem(placement: .navigationBarLeading){
-                    Button("Cancel"){
-                        dismiss()
-                    }
+                    Button("Cancel", role: .destructive){
+                        isPresentingConfirm = true
+                      }
+                     .confirmationDialog("Are you sure?",
+                       isPresented: $isPresentingConfirm) {
+                         Button("Delete all entries?", role: .destructive) {
+                             
+                         }
+                      }
                 }
             }
  
@@ -83,6 +91,9 @@ struct JournalView: View {
             print("error")
             fatalError("An error occured: \(error)")
         }
+    }
+    private func deleteContext(){
+        
     }
 }
 

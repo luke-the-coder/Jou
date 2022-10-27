@@ -3,52 +3,43 @@
 //  MC1
 //
 import SwiftUI
+import Foundation
+import UIKit
 
 struct ArchiveDetailView: View {
+    @FetchRequest(sortDescriptors: []) var entries: FetchedResults<JournalEntry>
     
     var detail: ArchiveCard
+    @State private var singleSelection: UUID?
     
     var body: some View {
         NavigationStack{
             ZStack{
-                Color("myBackground")
-                    .ignoresSafeArea()
-                VStack(spacing: 16) {
-                    Text(detail.archiveIcon)
-                        .font(.system(size: 70.0))
-                        .padding(.top, 16)
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 16) {
-                            
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Placeholder date")
+                Color("myBackground").ignoresSafeArea()
+                List(selection: $singleSelection){
+                    ForEach(entries) { entry in
+                        if (entry.mood == detail.archiveName || detail.archiveName == "All"){
+                            VStack(alignment: .leading, spacing: 8){
+                                Text(entry.date!, style: .date)
                                     .fontWeight(.bold)
                                     .padding(.top, 16)
-                                Text(detail.journal)
-                                    .font(.body)
-                                    .padding(.bottom, 16)
+                                Text("Your mood for the day: " + (entry.mood ?? "you haven't selected any mood"))
+                                Text("You entered: ")
+                                Text(entry.smallText ?? "Error")
+                                Text(entry.bigText ?? "Error")
                             }
-                            
-                            .padding(.horizontal, 16)
-                            .background(Color(UIColor.tertiarySystemBackground))
-                            .cornerRadius(14)
-                        
-                            
                         }
-                        Spacer()
                     }
-                    
+                    Spacer()
                 }
-                
-                
             }
-            .navigationTitle(detail.archiveName)
         }
+        .navigationTitle(detail.archiveName + " " + detail.archiveIcon)
     }
 }
 
 struct ArchiveDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ArchiveDetailView(detail: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10, journal: "..."))
+        ArchiveDetailView(detail: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10))
     }
 }
