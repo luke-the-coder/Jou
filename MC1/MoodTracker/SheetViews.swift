@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SheetViews: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     var emotion : SheetStruct
 
     var body: some View {
@@ -24,7 +24,7 @@ struct SheetViews: View {
                     .padding(.top, 40)
                 Text(emotion.subTitleCard)
                 Text(emotion.emoji)
-                    .foregroundColor(                   Color(UIColor.tertiarySystemBackground))
+                    .foregroundColor(Color(UIColor.tertiarySystemBackground))
                     .font(.system(size: 80.0))
                     .frame(width: 137, height: 137)
                     .background(Color.accentColor)
@@ -35,10 +35,11 @@ struct SheetViews: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 16)
                 Button{
-                    
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     ButtonBrowseAct()
                         .padding(.top, 16)
+                    
                 }
                 
                 
