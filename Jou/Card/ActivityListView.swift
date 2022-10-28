@@ -29,10 +29,10 @@ struct ActivityListView: View {
                     .foregroundColor(.secondary)
             }
             Spacer()
-            Image(systemName: "chevron.right")
+           /* Image(systemName: "chevron.right")
                                 .fontWeight(.medium)
                                 .foregroundColor(.secondary)
-                                //.padding(.trailing, 4)
+                                //.padding(.trailing, 4)*/
         }
     }
 }

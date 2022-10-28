@@ -8,6 +8,7 @@ struct TodayView: View {
     @ObservedObject var emojiVM = EmojiViewModel()
     @State private var moodToStore : String = ""
     @State private var showingSheet = false
+    @State private var showingSheetActivity = false
     @State private var emotionSheet = false
     @State private var selectedEmoji: SheetStruct?
     @State private var selectedActivity: Activity?
@@ -33,7 +34,6 @@ struct TodayView: View {
                             ForEach(Array(emojiVM.emojis.enumerated()), id: \.offset) { index, emoji in
                                 Button {
                                     emojiVM.selectEmoji(at: index)
-                                    
                                     selectedEmoji = emoji
                                     moodToStore = selectedEmoji!.title
                                 } label: {
@@ -43,7 +43,6 @@ struct TodayView: View {
                                 .sheet(item: $selectedEmoji) { selectedEmoji in
                                     SheetViews(emotion: selectedEmoji)
                                         .presentationDetents([.height(415)])
-                                    
                                 }
                                 
                             }
@@ -71,15 +70,16 @@ struct TodayView: View {
                             .font(.title2)
                             .bold()
                             .padding(.top, 24)
-                        List(0 ..< 1) { card in
-                            ForEach(activityResults) { card in
-                                //nomearray.append
-                                
+                        List {
+                            ForEach(activityResults, id: \.id) { card in
                                 ActivityListView(card: card)
-                                
+                                    .onTapGesture {
+                                        selectedActivity = card
+                                        self.showingSheetActivity.toggle()
+                                    }
                                     .sheet(item: $selectedActivity) { selectedActivity in
                                         ActivitySheetView(activitySheet: selectedActivity)
-                                            .presentationDetents([.height(500)])
+                                            .presentationDetents([.height(415)])
                                     }
                                 
                             }
