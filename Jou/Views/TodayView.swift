@@ -71,8 +71,7 @@ struct TodayView: View {
                             .bold()
                             .padding(.top, 24)
                         List {
-                            ForEach(Array(activityResults.enumerated()), id: \.offset) { index, card in
-                   
+                            ForEach(activityResults, id: \.id) { card in
                                 ActivityListView(card: card)
                                     .onTapGesture {
                                         selectedActivity = card
