@@ -5,17 +5,11 @@
 import SwiftUI
 
 struct TodayView: View {
-    
     @ObservedObject var emojiVM = EmojiViewModel()
-    
-    @State var viola: Color = .accentColor
-    
+    @State private var moodToStore : String = ""
     @State private var showingSheet = false
-    
     @State private var emotionSheet = false
-    @State private var selection = false
     @State private var selectedEmoji: SheetStruct?
-    
     @State private var selectedActivity: Activity?
     
     @State var moodSelect: MoodType = .sad
@@ -41,6 +35,7 @@ struct TodayView: View {
                                     emojiVM.selectEmoji(at: index)
                                     
                                     selectedEmoji = emoji
+                                    moodToStore = selectedEmoji!.title
                                 } label: {
                                     EmojiView(emojiButton: emoji)
                                         .foregroundColor(.primary)
@@ -61,7 +56,7 @@ struct TodayView: View {
                                     showingSheet.toggle()
                                 }
                                 .sheet(isPresented: $showingSheet) {
-                                    JournalView()
+                                    JournalView(moodToStore: $moodToStore)
                                 }
                                 .animation(Animation.linear, value: 2)
                             }

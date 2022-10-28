@@ -7,6 +7,8 @@ import SwiftUI
 import CoreData
 
 struct JournalView: View {
+    @Binding var moodToStore : String
+
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) var dismiss
     @State private var isPresentingConfirm: Bool = false
@@ -43,7 +45,6 @@ struct JournalView: View {
                         }
                     }
                 }
-     //           Text("Feel free to write what you want, you're in a safe place.").fontWeight(.thin).multilineTextAlignment(.leading).padding(.horizontal, 24).font(.caption2)
                 Spacer()
             }.navigationBarTitleDisplayMode(.inline).toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){ Button("Done") {
@@ -79,7 +80,7 @@ struct JournalView: View {
             journal.date = Date.now
             journal.smallText = textOne
             journal.bigText = textTwo
-            journal.mood = ""
+            journal.mood = moodToStore
             saveContext()
         }
     }
@@ -102,8 +103,7 @@ struct JournalView: View {
 
 struct JournalView_Previews: PreviewProvider {
     static var previews: some View {
-        let context =  MC1App().persistenceController.container.viewContext
-        return JournalView().environment(\.managedObjectContext, context)
-        //JournalView()
+        let context =  JouApp().persistenceController.container.viewContext
+        return JournalView(moodToStore: .constant("test")).environment(\.managedObjectContext, context)
     }
 }

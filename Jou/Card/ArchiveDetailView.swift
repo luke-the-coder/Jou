@@ -10,23 +10,39 @@ struct ArchiveDetailView: View {
     @FetchRequest(sortDescriptors: []) var entries: FetchedResults<JournalEntry>
     
     var detail: ArchiveCard
-    @State private var singleSelection: UUID?
+    @State private var showing: Bool = false
+    
     
     var body: some View {
         NavigationStack{
             ZStack{
                 Color("myBackground").ignoresSafeArea()
-                List(selection: $singleSelection){
-                    ForEach(entries) { entry in
+                ScrollView(){
+                    ForEach(entries, id:\.id) { entry in
                         if (entry.mood == detail.archiveName || detail.archiveName == "All"){
-                            VStack(alignment: .leading, spacing: 8){
+                            VStack(alignment: .leading, spacing: 24){
+                                Divider()
+                                
+                                
                                 Text(entry.date!, style: .date)
                                     .fontWeight(.bold)
-                                    .padding(.top, 16)
-                                Text("Your mood for the day: " + (entry.mood ?? "you haven't selected any mood"))
-                                Text("You entered: ")
+                                    .padding(.top, 16).onAppear{showing = true}
+                                if (entry.mood != ""){
+                                    Text("Your mood for the day: " + (entry.mood ?? "you haven't selected any mood"))
+                                }
+                                else {
+                                    Text("You haven't selected any mood for the day...")
+                                }
+                                Text("Journal: ")
+                                
                                 Text(entry.smallText ?? "Error")
                                 Text(entry.bigText ?? "Error")
+                            }
+                            .padding(.horizontal)
+                        }
+                        else {
+                            if (entry == entries.last && showing == false){
+                                Text("There's nothing here...")
                             }
                         }
                     }

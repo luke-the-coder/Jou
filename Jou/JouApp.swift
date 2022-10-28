@@ -6,7 +6,7 @@
 import SwiftUI
 
 @main
-struct MC1App: App {
+struct JouApp: App {
     let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
