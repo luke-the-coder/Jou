@@ -35,7 +35,7 @@ var activity = [
     Activity(mood: .angry, activityIcon: "airpodsmax", activityColor: Color("myGreen"), activityName: "Relax with music", activitySub: "Activity", description: Text("Listening to music is an excellent distraction technique that can help you vent your anger.Here some suggestion:\n- Pink Floyd - Breathe (In the air)\n- Boards of Canada - Olson\n- Brian Eno - Fullness of the Wind\n- Daft Punk - Veridis Quo")),
     
     //Sad
-    Activity(mood: .sad, activityIcon: "list.clipboard.fill", activityColor: Color("myTeal"), activityName: "Organize your space", activitySub: "Activity", description: Text("One of the best way to feel better is to give a quick and effective clean to your living space. Remember that where/how you live have a direct impact on your feelings.")),
-    Activity(mood: .sad, activityIcon: "leaf.fill", activityColor: Color("myGreen"), activityName: "Create change", activitySub: "Activity", description: Text("Your goals should be small and easy to accomplish, but as you keep working on them, you’ll be closer and closer to where you want to be in the future.\n\nThe only person who can change the course of your life is yourself. So take action and create change."))
+    Activity(mood: .sad, activityIcon: "list.clipboard.fill", activityColor: Color("myTeal"), activityName: "Organize your space", activitySub: "Activity", description: Text("One of the best way to feel better is to give a quick and effective clean to your living space. Remember that where and how you live have a direct impact on your feelings.")),
+    Activity(mood: .sad, activityIcon: "leaf.fill", activityColor: Color("myGreen"), activityName: "Create change", activitySub: "Activity", description: Text("Setting small goals help you be closer to where you want to be in the future.**The only person who can change the course of your life is yourself**. So take action and create change."))
     
 ]

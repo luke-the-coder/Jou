@@ -79,7 +79,7 @@ struct TodayView: View {
                                     }
                                     .sheet(item: $selectedActivity) { selectedActivity in
                                         ActivitySheetView(activitySheet: selectedActivity)
-                                            .presentationDetents([.height(415)])
+                                            .presentationDetents([.height(350)])
                                     }
                                 
                             }
