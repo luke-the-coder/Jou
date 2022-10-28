@@ -23,7 +23,7 @@ struct ArchiveCardView: View {
                         .foregroundColor(.primary)
                     
                 }
-                .padding(.vertical, 18)
+                .padding(.vertical, 30)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .fontWeight(.medium)

@@ -20,33 +20,34 @@ struct ArchiveDetailView: View {
                 ScrollView(){
                     ForEach(entries, id:\.id) { entry in
                         if (entry.mood == detail.archiveName || detail.archiveName == "All"){
-                            VStack(alignment: .leading, spacing: 24){
-                                Divider()
-                                
+                            VStack(alignment: .leading, spacing: 16){
+                                Divider().opacity(0)
+                                    
                                 
                                 Text(entry.date!, style: .date)
                                     .fontWeight(.bold)
-                                    .padding(.top, 16).onAppear{showing = true}
+                                    .padding(.top, 8).onAppear{showing = true}
                                 if (entry.mood != ""){
                                     Text("Your mood for the day: " + (entry.mood ?? "you haven't selected any mood"))
                                 }
                                 else {
                                     Text("You haven't selected any mood for the day...")
                                 }
-                                if (entry.smallText != "" || entry.bigText != ""){
-                                    Text("Journal: ")
-                                }
+                                
                                 Text((entry.smallText ?? "Error"))
                                 Text((entry.bigText ?? "Error"))
-                            }
-                            .padding(.horizontal)
+                                    .padding(.bottom, 24)
+                            }.padding(.horizontal, 16)
+                            //.padding(.horizontal)
                         }
                         else {
                             if (entry == entries.last && showing == false){
                                 Text("There's nothing here...")
                             }
                         }
-                    }
+                    }.frame(width: screenWidth-32)
+                        .background(Color("myCard"))
+                        .cornerRadius(14)
                     Spacer()
                 }
             }
