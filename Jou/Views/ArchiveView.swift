@@ -6,13 +6,13 @@ struct ArchiveView: View {
     let screenHeight = UIScreen.main.bounds.height
     
     var archiveCard = [
-        ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10),
-        ArchiveCard(archiveIcon: "😁", archiveName: "Happy", archiveDays: 2),
-        ArchiveCard(archiveIcon: "😲", archiveName: "Surprised", archiveDays: 2),
-        ArchiveCard(archiveIcon: "😰", archiveName: "Scared", archiveDays: 2),
-        ArchiveCard(archiveIcon: "🤢", archiveName: "Disgusted", archiveDays: 2),
-        ArchiveCard(archiveIcon: "😠", archiveName: "Angry", archiveDays: 2),
-        ArchiveCard(archiveIcon: "😢", archiveName: "Sad", archiveDays: 2)
+        ArchiveCard(archiveIcon: "🤩", archiveName: "All"),
+        ArchiveCard(archiveIcon: "😁", archiveName: "Happy"),
+        ArchiveCard(archiveIcon: "😲", archiveName: "Surprised"),
+        ArchiveCard(archiveIcon: "😰", archiveName: "Scared"),
+        ArchiveCard(archiveIcon: "🤢", archiveName: "Disgusted"),
+        ArchiveCard(archiveIcon: "😠", archiveName: "Angry"),
+        ArchiveCard(archiveIcon: "😢", archiveName: "Sad")
     ]
     
     var body: some View {
