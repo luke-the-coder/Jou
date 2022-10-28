@@ -24,6 +24,7 @@ struct JournalView: View {
                 
                 
                 Text("What happened today?").bold().padding([.leading], 16)
+                    .padding(.top, 24)
                 
                 TextField(
                     "Text...",
@@ -57,11 +58,12 @@ struct JournalView: View {
                     Button("Cancel", role: .destructive){
                         isPresentingConfirm = true
                       }
-                     .confirmationDialog("Are you sure?",
-                       isPresented: $isPresentingConfirm) {
-                         Button("Delete all entries?", role: .destructive) {
-                             
+                     .confirmationDialog("Are you sure you want to discard this journal?",
+                                         isPresented: $isPresentingConfirm, titleVisibility: .visible) {
+                         Button("Discard Changes", role: .destructive) {
+                             dismiss()
                          }
+                         Button("Keep Editing", role: .cancel) {}
                       }
                 }
             }

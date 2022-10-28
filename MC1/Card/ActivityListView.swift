@@ -32,7 +32,7 @@ struct ActivityListView: View {
             Image(systemName: "chevron.right")
                                 .fontWeight(.medium)
                                 .foregroundColor(.secondary)
-                                .padding(.trailing, 10)
+                                //.padding(.trailing, 4)
         }
     }
 }

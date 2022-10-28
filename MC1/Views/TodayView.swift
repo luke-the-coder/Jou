@@ -9,15 +9,17 @@ struct TodayView: View {
     @ObservedObject var emojiVM = EmojiViewModel()
     
     @State var viola: Color = .accentColor
-        
+    
     @State private var showingSheet = false
     
     @State private var emotionSheet = false
     @State private var selection = false
     @State private var selectedEmoji: SheetStruct?
     
+    @State private var selectedActivity: Activity?
+    
     @State var moodSelect: MoodType = .sad
-
+    
     var body: some View {
         
         NavigationStack {
@@ -45,7 +47,7 @@ struct TodayView: View {
                                 }
                                 .sheet(item: $selectedEmoji) { selectedEmoji in
                                     SheetViews(emotion: selectedEmoji)
-                                    .presentationDetents([.height(415)])
+                                        .presentationDetents([.height(415)])
                                     
                                 }
                                 
@@ -53,16 +55,16 @@ struct TodayView: View {
                             //benny finish
                             
                         }.padding(.trailing, 16)
-                        .navigationTitle("Hi there!")
-                        .toolbar{
-                            Button("Journal") {
-                                showingSheet.toggle()
+                            .navigationTitle("Hi there!")
+                            .toolbar{
+                                Button("Journal") {
+                                    showingSheet.toggle()
+                                }
+                                .sheet(isPresented: $showingSheet) {
+                                    JournalView()
+                                }
+                                .animation(Animation.linear, value: 2)
                             }
-                            .sheet(isPresented: $showingSheet) {
-                                JournalView()
-                            }
-                            .animation(Animation.linear, value: 2)
-                        }
                         
                     }.padding(.leading, 15)
                     
@@ -75,17 +77,22 @@ struct TodayView: View {
                             .bold()
                             .padding(.top, 24)
                         List(0 ..< 1) { card in
-                                            ForEach(activityResults) { card in
-                                                //nomearray.append
-                                                
-                                                ActivityListView(card: card)
-                                                
-                                            }
-                                            .padding(.vertical, 4)
-                                        }
-                                        .scrollContentBackground(.hidden)
-                                        //.scrollDisabled(true)
-                                        .padding(EdgeInsets(top: -48, leading: 0, bottom: 0, trailing: 0))
+                            ForEach(activityResults) { card in
+                                //nomearray.append
+                                
+                                ActivityListView(card: card)
+                                
+                                    .sheet(item: $selectedActivity) { selectedActivity in
+                                        ActivitySheetView(activitySheet: selectedActivity)
+                                            .presentationDetents([.height(500)])
+                                    }
+                                
+                            }
+                            .padding(.vertical, 4)
+                        }
+                        .scrollContentBackground(.hidden)
+                        .scrollDisabled(true)
+                        .padding(EdgeInsets(top: -48, leading: 0, bottom: 0, trailing: 0))
                     }
                     
                 }
@@ -94,7 +101,7 @@ struct TodayView: View {
             
             
             
-           
+            
             
             
         }
@@ -102,12 +109,12 @@ struct TodayView: View {
     }
     
     var activityResults: [Activity] {
-            let activityNeutral = activity.filter { $0.mood == .neutral }
-            var activityNeutralElement = activityNeutral.randomElement()
-            var activityNeutralCustom = activity.filter { $0.mood == moodSelect }
-            activityNeutralCustom.insert(activityNeutralElement!, at: 0)
-            return activityNeutralCustom
-        }
+        let activityNeutral = activity.filter { $0.mood == .neutral }
+        var activityNeutralElement = activityNeutral.randomElement()
+        var activityNeutralCustom = activity.filter { $0.mood == moodSelect }
+        activityNeutralCustom.insert(activityNeutralElement!, at: 0)
+        return activityNeutralCustom
+    }
 }
 
 

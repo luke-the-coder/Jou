@@ -23,7 +23,7 @@ struct EmojiView: View {
                     if emojiButton.isSelected {
                         Color.accentColor
                     } else {
-                        Color(UIColor.tertiarySystemBackground)
+                        Color("myCard")
                     }
                 }
                 .mask(Circle())

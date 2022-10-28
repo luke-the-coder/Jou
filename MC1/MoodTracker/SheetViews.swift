@@ -24,7 +24,7 @@ struct SheetViews: View {
                     .padding(.top, 40)
                 Text(emotion.subTitleCard)
                 Text(emotion.emoji)
-                    .foregroundColor(                   Color(UIColor.tertiarySystemBackground))
+                    .foregroundColor(Color("myCard"))
                     .font(.system(size: 80.0))
                     .frame(width: 137, height: 137)
                     .background(Color.accentColor)
