@@ -33,10 +33,11 @@ struct ArchiveDetailView: View {
                                 else {
                                     Text("You haven't selected any mood for the day...")
                                 }
-                                Text("Journal: ")
-                                
-                                Text(entry.smallText ?? "Error")
-                                Text(entry.bigText ?? "Error")
+                                if (entry.smallText != "" || entry.bigText != ""){
+                                    Text("Journal: ")
+                                }
+                                Text((entry.smallText ?? "Error"))
+                                Text((entry.bigText ?? "Error"))
                             }
                             .padding(.horizontal)
                         }

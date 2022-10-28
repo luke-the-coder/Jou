@@ -78,6 +78,7 @@ struct JournalView: View {
             let journal = JournalEntry(context: viewContext)
             journal.id = UUID()
             journal.date = Date.now
+            print(Date.now.formatted(date: .complete, time: .omitted))
             journal.smallText = textOne
             journal.bigText = textTwo
             journal.mood = moodToStore
@@ -88,10 +89,8 @@ struct JournalView: View {
     private func saveContext() {
         do {
             try viewContext.save()
-            print("done")
         } catch {
             let error = error as NSError
-            print("error")
             fatalError("An error occured: \(error)")
         }
     }
