@@ -17,8 +17,7 @@
 		0E16B6622907D132000EACA8 /* SheetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16B6612907D132000EACA8 /* SheetViews.swift */; };
 		0E1B3E89290540B7001B5471 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1B3E88290540B7001B5471 /* Launch Screen.storyboard */; };
 		0E1B3E8C29066958001B5471 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B3E8A29066958001B5471 /* Database.xcdatamodeld */; };
-		0E232C3328FD439400350399 /* MC1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E232C3228FD439400350399 /* MC1App.swift */; };
-		0E232C3528FD439400350399 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E232C3428FD439400350399 /* TodayView.swift */; };
+		0E232C3328FD439400350399 /* JouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E232C3228FD439400350399 /* JouApp.swift */; };
 		0E232C3728FD439500350399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E232C3628FD439500350399 /* Assets.xcassets */; };
 		0E232C3A28FD439500350399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E232C3928FD439500350399 /* Preview Assets.xcassets */; };
 		0E47EC41290274250010880D /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47EC40290274250010880D /* ArchiveView.swift */; };
@@ -27,6 +26,7 @@
 		0E47EC5129027A7D0010880D /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47EC5029027A7D0010880D /* PersistenceController.swift */; };
 		0E6AD37C2907D1A3003BD8FD /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */; };
 		0E6AD37E2907D1C5003BD8FD /* ButtonBrowseAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6AD37D2907D1C5003BD8FD /* ButtonBrowseAct.swift */; };
+		0E794728290BC31800B253DA /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E794727290BC31800B253DA /* TodayView.swift */; };
 		D37D849E2907DE3600466DFB /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37D849D2907DE3600466DFB /* EmojiViewModel.swift */; };
 		D3E64FC8290A95B600FF77A4 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FC7290A95B600FF77A4 /* ActivityCard.swift */; };
 		D3E64FCA290A960600FF77A4 /* ActivityArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E64FC9290A960600FF77A4 /* ActivityArray.swift */; };
@@ -45,9 +45,8 @@
 		0E16B6612907D132000EACA8 /* SheetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViews.swift; sourceTree = "<group>"; };
 		0E1B3E88290540B7001B5471 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0E1B3E8B29066958001B5471 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
-		0E232C2F28FD439400350399 /* MC1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E232C3228FD439400350399 /* MC1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC1App.swift; sourceTree = "<group>"; };
-		0E232C3428FD439400350399 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodayView.swift; path = MC1/Views/TodayView.swift; sourceTree = SOURCE_ROOT; };
+		0E232C2F28FD439400350399 /* Jou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E232C3228FD439400350399 /* JouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JouApp.swift; sourceTree = "<group>"; };
 		0E232C3628FD439500350399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E232C3928FD439500350399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E47EC40290274250010880D /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		0E47EC5029027A7D0010880D /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0E6AD37B2907D1A3003BD8FD /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		0E6AD37D2907D1C5003BD8FD /* ButtonBrowseAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBrowseAct.swift; sourceTree = "<group>"; };
+		0E794727290BC31800B253DA /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		D37D849D2907DE3600466DFB /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
 		D3E64FC7290A95B600FF77A4 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		D3E64FC9290A960600FF77A4 /* ActivityArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityArray.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		0E232C2628FD439400350399 = {
 			isa = PBXGroup;
 			children = (
-				0E232C3128FD439400350399 /* MC1 */,
+				0E232C3128FD439400350399 /* Jou */,
 				0E232C3028FD439400350399 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,12 +108,12 @@
 		0E232C3028FD439400350399 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E232C2F28FD439400350399 /* MC1.app */,
+				0E232C2F28FD439400350399 /* Jou.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E232C3128FD439400350399 /* MC1 */ = {
+		0E232C3128FD439400350399 /* Jou */ = {
 			isa = PBXGroup;
 			children = (
 				D37D849C2907DE1D00466DFB /* ViewModel */,
@@ -121,13 +121,13 @@
 				0E16B6582907CD60000EACA8 /* Model */,
 				0E16B6532907CD2B000EACA8 /* Card */,
 				0E47EC49290277E80010880D /* CoreData */,
-				0E232C3228FD439400350399 /* MC1App.swift */,
+				0E232C3228FD439400350399 /* JouApp.swift */,
 				0E47EC3F29015A810010880D /* Views */,
 				0E232C3628FD439500350399 /* Assets.xcassets */,
 				0E232C3828FD439500350399 /* Preview Content */,
 				0E1B3E88290540B7001B5471 /* Launch Screen.storyboard */,
 			);
-			path = MC1;
+			path = Jou;
 			sourceTree = "<group>";
 		};
 		0E232C3828FD439500350399 /* Preview Content */ = {
@@ -141,7 +141,7 @@
 		0E47EC3F29015A810010880D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E232C3428FD439400350399 /* TodayView.swift */,
+				0E794727290BC31800B253DA /* TodayView.swift */,
 				0E47EC40290274250010880D /* ArchiveView.swift */,
 				0E47EC442902744C0010880D /* FocusView.swift */,
 				0E47EC46290276CF0010880D /* JournalView.swift */,
@@ -181,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E232C2E28FD439400350399 /* MC1 */ = {
+		0E232C2E28FD439400350399 /* Jou */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E232C5328FD439500350399 /* Build configuration list for PBXNativeTarget "MC1" */;
+			buildConfigurationList = 0E232C5328FD439500350399 /* Build configuration list for PBXNativeTarget "Jou" */;
 			buildPhases = (
 				0E232C2B28FD439400350399 /* Sources */,
 				0E232C2C28FD439400350399 /* Frameworks */,
@@ -193,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = MC1;
+			name = Jou;
 			productName = MC1;
-			productReference = 0E232C2F28FD439400350399 /* MC1.app */;
+			productReference = 0E232C2F28FD439400350399 /* Jou.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0E232C2A28FD439400350399 /* Build configuration list for PBXProject "MC1" */;
+			buildConfigurationList = 0E232C2A28FD439400350399 /* Build configuration list for PBXProject "Jou" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,7 +226,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E232C2E28FD439400350399 /* MC1 */,
+				0E232C2E28FD439400350399 /* Jou */,
 			);
 		};
 /* End PBXProject section */
@@ -254,9 +254,9 @@
 				0E16B6622907D132000EACA8 /* SheetViews.swift in Sources */,
 				D37D849E2907DE3600466DFB /* EmojiViewModel.swift in Sources */,
 				0E16B64E2907C811000EACA8 /* ArchiveDetailView.swift in Sources */,
+				0E794728290BC31800B253DA /* TodayView.swift in Sources */,
 				0E16B64C2907C7C6000EACA8 /* DetailView.swift in Sources */,
 				D3E64FCA290A960600FF77A4 /* ActivityArray.swift in Sources */,
-				0E232C3528FD439400350399 /* TodayView.swift in Sources */,
 				0E47EC47290276CF0010880D /* JournalView.swift in Sources */,
 				D3E64FCE290A9A0400FF77A4 /* ActivityListView.swift in Sources */,
 				0E16B65E2907CD60000EACA8 /* ArchiveCard.swift in Sources */,
@@ -267,7 +267,7 @@
 				0E47EC452902744C0010880D /* FocusView.swift in Sources */,
 				0E47EC41290274250010880D /* ArchiveView.swift in Sources */,
 				D3E64FC8290A95B600FF77A4 /* ActivityCard.swift in Sources */,
-				0E232C3328FD439400350399 /* MC1App.swift in Sources */,
+				0E232C3328FD439400350399 /* JouApp.swift in Sources */,
 				0E16B6602907CD60000EACA8 /* SheetStruct.swift in Sources */,
 				0E47EC5129027A7D0010880D /* PersistenceController.swift in Sources */,
 				0E6AD37E2907D1C5003BD8FD /* ButtonBrowseAct.swift in Sources */,
@@ -398,7 +398,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MC1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Jou/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -428,7 +428,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MC1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Jou/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -454,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E232C2A28FD439400350399 /* Build configuration list for PBXProject "MC1" */ = {
+		0E232C2A28FD439400350399 /* Build configuration list for PBXProject "Jou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E232C5128FD439500350399 /* Debug */,
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E232C5328FD439500350399 /* Build configuration list for PBXNativeTarget "MC1" */ = {
+		0E232C5328FD439500350399 /* Build configuration list for PBXNativeTarget "Jou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E232C5428FD439500350399 /* Debug */,
