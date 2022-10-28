@@ -8,6 +8,7 @@ struct TodayView: View {
     @ObservedObject var emojiVM = EmojiViewModel()
     @State private var moodToStore : String = ""
     @State private var showingSheet = false
+    @State private var showingSheetActivity = false
     @State private var emotionSheet = false
     @State private var selectedEmoji: SheetStruct?
     @State private var selectedActivity: Activity?
@@ -71,15 +72,17 @@ struct TodayView: View {
                             .font(.title2)
                             .bold()
                             .padding(.top, 24)
-                        List(0 ..< 1) { card in
-                            ForEach(activityResults) { card in
-                                //nomearray.append
-                                
+                        List {
+                            ForEach(Array(activityResults.enumerated()), id: \.offset) { index, card in
+                   
                                 ActivityListView(card: card)
-                                
-                                    .sheet(item: $selectedActivity) { selectedActivity in
-                                        ActivitySheetView(activitySheet: selectedActivity)
-                                            .presentationDetents([.height(500)])
+                                    .onTapGesture {
+                                        
+                                        self.showingSheetActivity.toggle()
+                                    }
+                                    .sheet(isPresented: self.$showingSheetActivity) {
+                                        ActivitySheetView(activitySheet: card)
+                                            .presentationDetents([.height(415)])
                                     }
                                 
                             }
