@@ -21,10 +21,7 @@ struct ArchiveCardView: View {
                     Text(card.archiveName)
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
-                    HStack{
-                        Text("\(card.archiveDays) days")
-                            .foregroundColor(.secondary)
-                    }
+                    
                 }
                 .padding(.vertical, 18)
                 Spacer()
@@ -42,6 +39,6 @@ struct ArchiveCardView: View {
 
 struct ArchiveCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ArchiveCardView(card: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10))
+        ArchiveCardView(card: ArchiveCard(archiveIcon: "🤩", archiveName: "All"))
     }
 }

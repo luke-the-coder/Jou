@@ -12,5 +12,4 @@ struct ArchiveCard: Identifiable {
     var id: UUID = UUID()
     var archiveIcon: String
     var archiveName: String
-    var archiveDays: Int
 }

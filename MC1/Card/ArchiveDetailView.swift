@@ -40,6 +40,6 @@ struct ArchiveDetailView: View {
 
 struct ArchiveDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ArchiveDetailView(detail: ArchiveCard(archiveIcon: "🤩", archiveName: "All", archiveDays: 10))
-    }
+        ArchiveDetailView(detail: ArchiveCard(archiveIcon: "🤩", archiveName: "All")
+    )}
 }
