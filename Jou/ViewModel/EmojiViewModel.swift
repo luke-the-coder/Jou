@@ -12,7 +12,7 @@ class EmojiViewModel: ObservableObject {
     // Mantiene il Model
     @Published var emojis = [
             SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are happy", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😁", title: "Happy", isSelected: false),
-            SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are surprise", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😲", title: "Surpised", isSelected: false),
+            SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are surprised", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😲", title: "Surprised", isSelected: false),
             SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are scared", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😰", title: "Scared", isSelected: false),
             SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are disgusted", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "🤢", title: "Disgusted", isSelected: false),
             SheetStruct(titleCard: "Mood of the day", subTitleCard: "Seems like you are angry", description: "Happiness has many different definitions and it motivate us to do things that are good for us.",emoji: "😠", title: "Angry", isSelected: false),
