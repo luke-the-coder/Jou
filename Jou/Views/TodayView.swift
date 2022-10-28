@@ -34,7 +34,6 @@ struct TodayView: View {
                             ForEach(Array(emojiVM.emojis.enumerated()), id: \.offset) { index, emoji in
                                 Button {
                                     emojiVM.selectEmoji(at: index)
-                                    
                                     selectedEmoji = emoji
                                     moodToStore = selectedEmoji!.title
                                 } label: {
@@ -44,7 +43,6 @@ struct TodayView: View {
                                 .sheet(item: $selectedEmoji) { selectedEmoji in
                                     SheetViews(emotion: selectedEmoji)
                                         .presentationDetents([.height(415)])
-                                    
                                 }
                                 
                             }
@@ -77,11 +75,11 @@ struct TodayView: View {
                    
                                 ActivityListView(card: card)
                                     .onTapGesture {
-                                        
+                                        selectedActivity = card
                                         self.showingSheetActivity.toggle()
                                     }
-                                    .sheet(isPresented: self.$showingSheetActivity) {
-                                        ActivitySheetView(activitySheet: card)
+                                    .sheet(item: $selectedActivity) { selectedActivity in
+                                        ActivitySheetView(activitySheet: selectedActivity)
                                             .presentationDetents([.height(415)])
                                     }
                                 
