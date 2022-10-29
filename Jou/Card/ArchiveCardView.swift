@@ -30,7 +30,7 @@ struct ArchiveCardView: View {
                     .foregroundColor(.secondary)
                     .padding(.trailing, 16)
             }
-            .background(Color(UIColor.tertiarySystemBackground))
+            .background(Color("myCard"))
             .cornerRadius(14)
             .padding(.horizontal, 16)
         }
