@@ -31,16 +31,17 @@ struct JournalView: View {
                 TextField(
                     "Text...",
                     text: $textOne
-                ).padding([.leading, .trailing], 16).textFieldStyle(.roundedBorder)
+                ).padding(.vertical, 8).padding(.leading, 8).overlay(RoundedRectangle(cornerRadius: 8).stroke(Color(UIColor.secondarySystemBackground), lineWidth: 1)).padding([.leading, .trailing], 16)
                 
                 Text("Do you want to say something more?").bold().padding([.leading, .top], 16)
                 
                 ZStack(alignment: .topLeading){
                     TextEditor(text: $textTwo)
-                        .frame(minHeight: 50, maxHeight: 200).border(Color(red: 0.965, green: 0.965, blue: 0.965), width: 2).padding(.horizontal, 16).cornerRadius(2)
+                        .frame(minHeight: 50, maxHeight: 200).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(UIColor.secondarySystemBackground), lineWidth: 1)).padding(.horizontal, 16)
+                        
                     if textTwo.isEmpty {
                         HStack{
-                            Text("Write something...").foregroundColor(Color(red: 0.772, green: 0.777, blue: 0.785))
+                            Text("Write something...").foregroundColor(.gray)
                                 .padding([.leading], 24).padding([.top], 8)
                         }
                     }
